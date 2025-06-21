@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=70.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfypsi_blur_mask"
+version = "1.0.0"
+description = "A custom node for ComfyUI that applies a Gaussian blur to a mask."
+authors = [{ name = "psi", email = "rookiepsi@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["bump-my-version", "coverage", "mypy", "pre-commit", "pytest", "ruff"]
+
+[project.urls]
+bugs = "https://github.com/rookiepsi/comfypsi_blur_mask/issues"
+homepage = "https://github.com/rookiepsi/comfypsi_blur_mask"
+
+[tool.comfy]
+PublisherId = "rookiepsi"
+DisplayName = "Blur Mask"
+Icon = ""
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["web/**", "assets/**"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+
+[tool.mypy]
+files = "."
+strict = true
+warn_unreachable = true
+warn_no_return = true
+check_untyped_defs = false
+
+[[tool.mypy.overrides]]
+module = "src.*"
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disable_error_code = ["attr-defined"]
+
+[tool.ruff]
+line-length = 140
+src = ["src", "tests"]
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "S"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]

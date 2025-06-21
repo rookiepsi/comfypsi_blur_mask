@@ -1,0 +1,17 @@
+name: Validate Backwards Compatibility
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Node Compatibility
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Node Diff
+        uses: comfy-org/node-diff@main
