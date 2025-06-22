@@ -14,4 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Everything.
 
 [unreleased]: https://github.com/rookiepsi/comfypsi_blur_mask/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/rookiepsi//comfypsi_blur_mask/releases/tag/v1.0.0
+[1.0.0]: https://github.com/rookiepsi/comfypsi_blur_mask/releases/tag/v1.0.0
