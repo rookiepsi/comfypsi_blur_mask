@@ -18,7 +18,7 @@ There are two ways to install this custom node:
 ### Manual
 
 1.  Navigate to your `ComfyUI/custom_nodes/` directory.
-2.  Clone the repository: `git clone https://github.com/rookiepsi/comfypsi_blur_mask.git`
+2.  Clone the repository: `git clone https://github.com/rookiepsi/comfypsi_blur_mask.git`.
 3.  Restart ComfyUI.
 
 ## Usage
