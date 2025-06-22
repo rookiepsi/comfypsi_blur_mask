@@ -1,0 +1,54 @@
+name: "✨ Feature Request"
+description: "Suggest an enhancement or new idea for the node."
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: "rookiepsi"
+
+body:
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: "What problem would this feature solve?"
+      description: "A clear and concise description of why this change is needed."
+      placeholder: "Example: When I use the node for [a specific task], I find I always have to [do a manual step afterwards]. It would be more efficient if the node could do this automatically."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: enhancement-type
+    attributes:
+      label: "What kind of enhancement is this?"
+      description: "Select the primary type of change you are proposing."
+      options:
+        - label: "Add a new widget (slider, dropdown, text box, etc.)"
+        - label: "Add an input connection (a dot on the left side)"
+        - label: "Add an output connection (a dot on the right side)"
+        - label: "Change how the node works without adding new UI elements"
+        - label: "Other (please describe in detail below)"
+
+  - type: textarea
+    id: proposal-details
+    attributes:
+      label: "Describe your proposed enhancement"
+      description: "Please be as specific as possible. How would you like the node to change? Provide details for your selection above."
+      placeholder: |
+        Details of your proposal...
+        - For a new widget: "Add a slider named `intensity` from 0.0 to 2.0."
+        - For a new input: "Add a `MASK` input so I can use a mask from another node."
+        - For a functional change: "Change the image processing algorithm to use method Y instead of X for better results."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Are there any alternatives you've considered?"
+      description: "A clear and concise description of any alternative solutions you've considered or workarounds you are currently using."
+      placeholder: "I've tried connecting nodes X and Y to achieve this, but it has this downside..."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Add any other context, mockups, or screenshots about the feature request here. Mockups are extremely helpful for UI changes!"
+      placeholder: "You can drag and drop images or files into this text area."
