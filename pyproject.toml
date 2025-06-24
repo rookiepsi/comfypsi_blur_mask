@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "comfypsi_blur_mask"
-version = "1.0.0"
+version = "1.0.1"
 description = "A custom node for ComfyUI that applies a Gaussian blur to a mask."
 authors = [{ name = "psi", email = "rookiepsi@gmail.com" }]
 readme = "README.md"
@@ -28,8 +28,9 @@ dependencies = []
 dev = ["bump-my-version", "coverage", "mypy", "pre-commit", "pytest", "ruff"]
 
 [project.urls]
-bugs = "https://github.com/rookiepsi/comfypsi_blur_mask/issues"
-homepage = "https://github.com/rookiepsi/comfypsi_blur_mask"
+repository = "https://github.com/rookiepsi/comfypsi_blur_mask"
+changelog = "https://github.com/rookiepsi/comfypsi_blur_mask/blob/main/CHANGELOG.md"
+issues = "https://github.com/rookiepsi/comfypsi_blur_mask/issues"
 
 [tool.comfy]
 PublisherId = "rookiepsi"
